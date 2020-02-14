@@ -49,3 +49,12 @@ Step | Unify | Rule | Substitution
 4 | 'lo' = 'lo'| 2 |
 5 | 'l' = 'l'| 2 | 
 6 | '' = '' | 1 | yes 
+
+### Unifying 'a' and 'ab'
+
+Step | Unify | Rule | Substitution 
+------------ | ------------- | ------------- | -------------
+1 | 'a' = 'ab'| 2 | 
+2 | '' = 'b'| 4 | 
+3 | 'b' = ''| 3 | fucked
+
