@@ -19,7 +19,7 @@ Let's say that l1 = H1|Tail1 and l2 = H2|Tail2
 
 The unification of two lists is made by the function unify(l1, l2).
 The following algorithm describes this function.
-By the way, unifying is commutative and associative, I guess. Maybe more, dunno yet.
+By the way, unifying is commutative.
 
 The first four rules deal with at least an empty string one one side.
 Btw, it's enough to test the equality of two strings.
