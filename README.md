@@ -1,4 +1,4 @@
-#String and Chords
+# String and Chords
 The goal of this theory (and optionnaly libary) is to extend the notion of String to something new the Chords
 
 Basically a string is a list of characters.
@@ -24,22 +24,23 @@ By the way, unifying is commutative and associative, I guess. Maybe more, dunno 
 The first four rules deal with at least an empty string one one side.
 Btw, it's enough to test the equality of two strings.
 
-###Rule 1: The empty string
+### Rule 1: The empty string
 If l1 = l2 = '' then the unification terminates and succeeds.
 
-###Rule 2: H1 and H2 are two characters
+### Rule 2: H1 and H2 are two characters
 If H1 == H2 then the unification succeeds if unify(Tail1, Tail2) succeeds.
 If H1 != H2 then the unification fails
 
-###Rule 3: l1 is not empty and l2 is empty.
+### Rule 3: l1 is not empty and l2 is empty.
 If H1 is an atom the unification fails.
 If H1 is a variable V, the unification succeeds if V can unify with ''
 
-###Rule 4: l1 is empty and l2 is not empty.
+### Rule 4: l1 is empty and l2 is not empty.
 Since unification is commutative, the result is unify(l2, l1) that is apply the third rule.
 
-##Examples
-###Unifying 'hello' and 'hello'
+## Examples
+### Unifying 'hello' and 'hello'
+
 Step | Unify | Rule | Substitution 
 ------------ | ------------- | ------------- | -------------
 1 | 'hello' = 'hello'| 2 | 
