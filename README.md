@@ -1,11 +1,13 @@
 # String and Chords
-The goal of this theory (and optionnaly libary) is to extend the notion of String to something new the Chords
+The goal of this theory (and library) is to extend the notion of String to something new the Chords
 
 Basically a string is a list of characters.
 A chord is a list of characters or variables.
 
 The notation for a variable is just {{X}}.
 So a chord looks like 'hello {{X}} world'.
+
+Of course when you unifies two chords, two variables with the same name denote the same variable.
 
 Chords have a new method, an operator that unifies two chords. For example unifying 'boys and girls' and 'boys {{X}} girls'
 has an obvious solution, X = 'and'.
@@ -21,8 +23,7 @@ The unification of two lists is made by the function unify(l1, l2).
 The following algorithm describes this function.
 By the way, unifying is commutative.
 
-The first four rules deal with at least an empty string one one side.
-Btw, it's enough to test the equality of two strings.
+The first four rules are enough to test the equality of two strings.
 
 ### Rule 1: The empty string
 If l1 = l2 = '' then the unification terminates and succeeds.
